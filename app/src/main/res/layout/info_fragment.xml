@@ -34,17 +34,18 @@
         android:textSize="30sp"
         android:layout_marginBottom="20dp"
         android:padding="5dp"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:maxLength="3"/>
 
-    <EditText
-        android:id="@+id/edit_birth"
+    <Button
+        android:id="@+id/btn_birth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
         android:hint="생년월일"
         android:textSize="30sp"
         android:padding="5dp"
-        android:inputType="date"/>
+        android:textAlignment="textStart"/>
 
     <Button
         android:id="@+id/btn_save"
