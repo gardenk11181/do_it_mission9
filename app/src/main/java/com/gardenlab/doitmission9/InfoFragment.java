@@ -24,6 +24,8 @@ import java.util.GregorianCalendar;
 public class InfoFragment extends Fragment{
     Button btnBirth;
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    EditText editName;
+    EditText editAge;
 
     @Nullable
     @Override
@@ -48,6 +50,17 @@ public class InfoFragment extends Fragment{
                         btnBirth.setText(dateFormat.format(selected));
                     }
                 });
+            }
+        });
+
+        editAge = rootView.findViewById(R.id.edit_age);
+        editName = rootView.findViewById(R.id.edit_name);
+
+        Button btnSave = rootView.findViewById(R.id.btn_save);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "이름: "+editName.getText().toString()+", 나이: "+editAge.getText().toString()+", 생년월일: "+btnBirth.getText().toString(),Toast.LENGTH_SHORT).show();
             }
         });
 

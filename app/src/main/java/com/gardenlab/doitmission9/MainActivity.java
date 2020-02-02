@@ -8,6 +8,8 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -17,9 +19,6 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     InfoFragment infoFragment;
-    EditText editName;
-    EditText editAge;
-    EditText editBirth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
         infoFragment = new InfoFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.container, infoFragment).commit();
-
 
     }
 }
